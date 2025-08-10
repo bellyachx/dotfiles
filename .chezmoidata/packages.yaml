@@ -3,5 +3,6 @@ packages:
     brews:
     - 'zoxide'
     - 'fzf'
+    - 'eza'
     casks:
 
