@@ -5,13 +5,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Initialize completions (needed if you haven’t already)
-# autoload -Uz compinit
-# compinit
-
 # load antidote
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+{{ if eq .chezmoi.os "darwin" -}}
+# macOS: install via brew if missing
+if ! command -v antidote &>/dev/null && [ ! -f "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh" ]; then
+    echo "Installing antidote via Homebrew..."
+    brew install antidote
+fi
+source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 
+{{ else if eq .chezmoi.os "linux" -}}
+# Linux: install via git if missing
+if [ ! -f "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh" ]; then
+    echo "Installing antidote via git..."
+    git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR:-$HOME}/.antidote"
+fi
+source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
+{{ end -}}
+
+# load plugins
 antidote load
 
 setopt EXTENDED_GLOB
