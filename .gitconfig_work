@@ -1,0 +1,7 @@
+[user]
+  name = Maxim
+  email = maxim.cepraga@micb.md
+[pull]
+  rebase = true
+[core]
+  autocrlf = input

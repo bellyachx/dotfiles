@@ -1,0 +1,6 @@
+{{ $computerName := output "scutil" "--get" "ComputerName" | trim }}
+{{ if eq $computerName "ti10macnb19" -}}
+  {{- include ".gitconfig_work" -}}
+{{ else -}}
+  {{- include ".gitconfig_personal" -}}
+{{ end -}}
