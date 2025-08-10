@@ -1,0 +1,17 @@
+# completions
+mattmc3/ez-compinit
+zsh-users/zsh-completions kind:defer
+
+# fish-like plugins
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# p10k
+romkatv/powerlevel10k
+
+# fzf
+Aloxaf/fzf-tab kind:defer
+
+# other
+zdharma-continuum/history-search-multi-word kind:defer
+ajeetdsouza/zoxide kind:defer

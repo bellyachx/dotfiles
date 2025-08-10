@@ -1,0 +1,13 @@
+### ZSH Style
+
+# Enable case-insensitive (but case-aware) completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Optional: make it also match hyphens/underscores and ignore accents
+zstyle ':completion:*' matcher-list \
+    'm:{a-z}={A-Z}' \
+    'm:{a-z}={A-Z} r:|[-_]=* r:|=*' \
+    'm:{a-zA-Z}={áÁàÀâÂäÄãÃåÅ}'
+
+# Antidote
+zstyle ':antidote:bundle' use-friendly-names on

@@ -1,0 +1,5 @@
+### ZSH Options
+
+# setopt CORRECT        # Correct commands
+setopt CORRECT_ALL    # Correct commands + arguments (more aggressive)
+
