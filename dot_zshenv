@@ -1,5 +1,6 @@
-. "$HOME/.cargo/env"
-export PATH=/Users/maxim/.local/bin:$PATH
+if [ -d "$HOME/.cargo" ]; then
+  . "$HOME/.cargo/env"
+fi
 
 # exporting variables
 export XDG_CONFIG_HOME="$HOME/.config"
