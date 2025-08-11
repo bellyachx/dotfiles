@@ -1,6 +1,12 @@
+# OMZ plugins
+ohmyzsh/ohmyzsh
+ohmyzsh/ohmyzsh path:plugins/mvn
+
 # completions
+zsh-users/zsh-completions
+matthieusb/zsh-sdkman
+### This plugin should be loaded AFTER other completion plugins!!! ###
 mattmc3/ez-compinit
-zsh-users/zsh-completions kind:defer
 
 # fish-like plugins
 zsh-users/zsh-autosuggestions kind:defer
@@ -11,9 +17,6 @@ romkatv/powerlevel10k
 
 # fzf
 Aloxaf/fzf-tab kind:defer
-
-# sdkman
-matthieusb/zsh-sdkman # sdkman completions
 
 # other
 zdharma-continuum/history-search-multi-word kind:defer
