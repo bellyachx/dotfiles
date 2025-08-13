@@ -1,4 +1,3 @@
 #!/bin/bash
 
 open -na "Intellij IDEA Ultimate.app" --args "$@"
-

@@ -1721,4 +1721,3 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 # Enable kitty integration to avoid mess when resizing terminal window
 typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
-
